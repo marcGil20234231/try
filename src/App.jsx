@@ -110,7 +110,7 @@ export default function App() {
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#7c3aed] to-[#06b6d4] shadow-[0_0_20px_rgba(124,58,237,0.12)] flex items-center justify-center font-extrabold text-lg">RG</div>
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold tracking-wide neon-text">RGN Collective</h1>
+              <h1 className="text-lg font-bold tracking-wide neon-text">RGNs Collective</h1>
               <p className="text-xs text-[#a6b0d6]">Games — Updates — News</p>
             </div>
           </div>
