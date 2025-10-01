@@ -1,0 +1,82 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base font stack */
+:root {
+  --neon-purple: #7c3aed;
+  --neon-blue: #06b6d4;
+  --neon-red: #ef4444;
+  --bg-900: #06060b;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: "Orbitron", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: var(--bg-900);
+}
+
+/* Neon text gradients */
+.neon-text {
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 12px rgba(124,58,237,0.14));
+}
+
+.neon-header {
+  text-shadow: 0 2px 18px rgba(124,58,237,0.12), 0 0 6px rgba(6,182,212,0.06);
+}
+
+.neon-sub {
+  color: #cbd5ff;
+  text-shadow: 0 0 8px rgba(124,58,237,0.06);
+}
+
+.neon-card {
+  text-shadow: 0 0 6px rgba(99,102,241,0.06);
+}
+
+.neon-btn {
+  color: white;
+  box-shadow: 0 0 18px rgba(124,58,237,0.12);
+}
+
+/* Nav hover underline */
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  color: #bfc9ff;
+  cursor: pointer;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  transition: width 220ms ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* small tweaks for backgrounds and decorative plates */
+.bg-plate {
+  background-image: radial-gradient(circle at 10% 10%, rgba(124,58,237,0.02), transparent 10%),
+                    radial-gradient(circle at 90% 70%, rgba(6,182,212,0.02), transparent 10%);
+}
+
+/* Reduce motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
